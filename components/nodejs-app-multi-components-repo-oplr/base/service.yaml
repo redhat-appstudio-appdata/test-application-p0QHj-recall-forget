@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: nodejs-app-multi-components-repo-oplr
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: nodejs-app-multi-components-repo-oplr
+    app.kubernetes.io/part-of: test-application
+  name: nodejs-app-multi-components-repo-oplr
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+  selector:
+    app.kubernetes.io/instance: nodejs-app-multi-components-repo-oplr
+status:
+  loadBalancer: {}
